@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'webhookdatasending'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation files('libs/mindustry.jar')
+    implementation files('libs/json-20070829.jar')
+}
+
+test {
+    useJUnitPlatform()
+}
